@@ -39,7 +39,7 @@ namespace WindowsTextReader
 
         private void voiceSelectionMenu_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            Synth.SelectVoice(voiceSelectionMenu.Text);
         }
     }
 }

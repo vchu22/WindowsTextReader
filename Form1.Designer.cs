@@ -109,7 +109,7 @@
             voiceSelectionMenu.FormattingEnabled = true;
             voiceSelectionMenu.Location = new Point(150, 12);
             voiceSelectionMenu.Name = "voiceSelectionMenu";
-            voiceSelectionMenu.Size = new Size(460, 33);
+            voiceSelectionMenu.Size = new Size(283, 33);
             voiceSelectionMenu.TabIndex = 1;
             voiceSelectionMenu.SelectedIndexChanged += voiceSelectionMenu_SelectedIndexChanged;
             // 
