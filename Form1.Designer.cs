@@ -34,6 +34,8 @@
             clearButton = new Button();
             readButton = new Button();
             label1 = new Label();
+            voiceSelectionMenu = new ComboBox();
+            label0 = new Label();
             tableLayoutPanel1.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
@@ -44,7 +46,7 @@
             readOutLoudTextBox.Location = new Point(3, 3);
             readOutLoudTextBox.Name = "readOutLoudTextBox";
             readOutLoudTextBox.Size = new Size(794, 368);
-            readOutLoudTextBox.TabIndex = 0;
+            readOutLoudTextBox.TabIndex = 3;
             readOutLoudTextBox.Text = "Text to read";
             // 
             // tableLayoutPanel1
@@ -78,7 +80,7 @@
             clearButton.Location = new Point(3, 3);
             clearButton.Name = "clearButton";
             clearButton.Size = new Size(112, 34);
-            clearButton.TabIndex = 2;
+            clearButton.TabIndex = 4;
             clearButton.Text = "Clear Text";
             clearButton.UseVisualStyleBackColor = true;
             clearButton.Click += clearButton_Click;
@@ -88,7 +90,7 @@
             readButton.Location = new Point(121, 3);
             readButton.Name = "readButton";
             readButton.Size = new Size(180, 34);
-            readButton.TabIndex = 1;
+            readButton.TabIndex = 5;
             readButton.Text = "Read the text";
             readButton.UseVisualStyleBackColor = true;
             readButton.Click += readButton_Click;
@@ -102,11 +104,31 @@
             label1.TabIndex = 2;
             label1.Text = "Paste the text to read out loud below:";
             // 
+            // voiceSelectionMenu
+            // 
+            voiceSelectionMenu.FormattingEnabled = true;
+            voiceSelectionMenu.Location = new Point(150, 12);
+            voiceSelectionMenu.Name = "voiceSelectionMenu";
+            voiceSelectionMenu.Size = new Size(460, 33);
+            voiceSelectionMenu.TabIndex = 1;
+            voiceSelectionMenu.SelectedIndexChanged += voiceSelectionMenu_SelectedIndexChanged;
+            // 
+            // label0
+            // 
+            label0.AutoSize = true;
+            label0.Location = new Point(12, 15);
+            label0.Name = "label0";
+            label0.Size = new Size(118, 25);
+            label0.TabIndex = 0;
+            label0.Text = "Select a voice";
+            // 
             // TextReader
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 548);
+            Controls.Add(label0);
+            Controls.Add(voiceSelectionMenu);
             Controls.Add(label1);
             Controls.Add(tableLayoutPanel1);
             Name = "TextReader";
@@ -126,5 +148,7 @@
         private FlowLayoutPanel flowLayoutPanel1;
         private Button clearButton;
         private Label label1;
+        private ComboBox voiceSelectionMenu;
+        private Label label0;
     }
 }
