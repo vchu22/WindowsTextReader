@@ -91,6 +91,7 @@
             readButton.TabIndex = 1;
             readButton.Text = "Read the text";
             readButton.UseVisualStyleBackColor = true;
+            readButton.Click += readButton_Click;
             // 
             // label1
             // 
