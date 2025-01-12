@@ -30,9 +30,9 @@
         {
             readOutLoudTextBox = new RichTextBox();
             tableLayoutPanel1 = new TableLayoutPanel();
-            readButton = new Button();
             flowLayoutPanel1 = new FlowLayoutPanel();
             clearButton = new Button();
+            readButton = new Button();
             label1 = new Label();
             tableLayoutPanel1.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
@@ -63,15 +63,6 @@
             tableLayoutPanel1.Size = new Size(800, 468);
             tableLayoutPanel1.TabIndex = 1;
             // 
-            // readButton
-            // 
-            readButton.Location = new Point(121, 3);
-            readButton.Name = "readButton";
-            readButton.Size = new Size(180, 34);
-            readButton.TabIndex = 1;
-            readButton.Text = "Read the text";
-            readButton.UseVisualStyleBackColor = true;
-            // 
             // flowLayoutPanel1
             // 
             flowLayoutPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
@@ -90,6 +81,16 @@
             clearButton.TabIndex = 2;
             clearButton.Text = "Clear Text";
             clearButton.UseVisualStyleBackColor = true;
+            clearButton.Click += clearButton_Click;
+            // 
+            // readButton
+            // 
+            readButton.Location = new Point(121, 3);
+            readButton.Name = "readButton";
+            readButton.Size = new Size(180, 34);
+            readButton.TabIndex = 1;
+            readButton.Text = "Read the text";
+            readButton.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
