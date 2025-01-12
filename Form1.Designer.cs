@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TextReader));
             readOutLoudTextBox = new RichTextBox();
             clearButton = new Button();
             readButton = new Button();
@@ -156,6 +157,7 @@
             Controls.Add(label0);
             Controls.Add(voiceSelectionMenu);
             Controls.Add(label1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip;
             Name = "TextReader";
             Text = "Text Reader";
