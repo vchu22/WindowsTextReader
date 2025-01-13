@@ -61,9 +61,9 @@
             // 
             // clearButton
             // 
-            clearButton.Location = new Point(631, 6);
+            clearButton.Location = new Point(603, 6);
             clearButton.Name = "clearButton";
-            clearButton.Size = new Size(112, 34);
+            clearButton.Size = new Size(160, 32);
             clearButton.TabIndex = 9;
             clearButton.Text = "Clear Text";
             clearButton.UseVisualStyleBackColor = true;
@@ -71,11 +71,11 @@
             // 
             // readButton
             // 
-            readButton.Location = new Point(749, 6);
+            readButton.Location = new Point(769, 6);
             readButton.Name = "readButton";
-            readButton.Size = new Size(180, 34);
+            readButton.Size = new Size(160, 32);
             readButton.TabIndex = 10;
-            readButton.Text = "Read the text";
+            readButton.Text = "Read Text";
             readButton.UseVisualStyleBackColor = true;
             readButton.Click += readButton_Click;
             // 
@@ -84,9 +84,9 @@
             label1.AutoSize = true;
             label1.Location = new Point(12, 83);
             label1.Name = "label1";
-            label1.Size = new Size(309, 25);
+            label1.Size = new Size(320, 25);
             label1.TabIndex = 6;
-            label1.Text = "Paste the text to read out loud below:";
+            label1.Text = "Paste your text below to read out loud:";
             // 
             // voiceSelectionMenu
             // 
@@ -127,19 +127,19 @@
             // importTexttxtToolStripMenuItem1
             // 
             importTexttxtToolStripMenuItem1.Name = "importTexttxtToolStripMenuItem1";
-            importTexttxtToolStripMenuItem1.Size = new Size(270, 34);
+            importTexttxtToolStripMenuItem1.Size = new Size(250, 34);
             importTexttxtToolStripMenuItem1.Text = "Import text (*.txt)";
             // 
             // settingsToolStripMenuItem1
             // 
             settingsToolStripMenuItem1.Name = "settingsToolStripMenuItem1";
-            settingsToolStripMenuItem1.Size = new Size(270, 34);
+            settingsToolStripMenuItem1.Size = new Size(250, 34);
             settingsToolStripMenuItem1.Text = "Settings";
             // 
             // exitToolStripMenuItem1
             // 
             exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
-            exitToolStripMenuItem1.Size = new Size(270, 34);
+            exitToolStripMenuItem1.Size = new Size(250, 34);
             exitToolStripMenuItem1.Text = "Exit";
             // 
             // flowLayoutPanel1
