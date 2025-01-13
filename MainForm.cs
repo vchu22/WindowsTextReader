@@ -7,11 +7,19 @@ namespace WindowsTextReader
     {
         // Initialize a new instance of the SpeechSynthesizer.
         SpeechSynthesizer Synth = new SpeechSynthesizer();
+        List<VoiceInfo> voiceInfoList = new List<VoiceInfo>();
         public TextReader()
         {
             // Configure the audio output.
             Synth.SetOutputToDefaultAudioDevice();
             InitializeComponent();
+        }
+
+        private void ChangeVoice()
+        {
+            Synth.SelectVoice(voiceSelectionMenu.Text);
+            genderLabel.Text = voiceInfoList.ElementAt(voiceSelectionMenu.SelectedIndex).Gender.ToString();
+            langLabel.Text = voiceInfoList.ElementAt(voiceSelectionMenu.SelectedIndex).Culture.ToString();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -20,9 +28,10 @@ namespace WindowsTextReader
             {
                 var info = voice.VoiceInfo;
                 voiceSelectionMenu.Items.Add($"{info.Name}");
+                voiceInfoList.Add(info);
             }
             voiceSelectionMenu.SelectedIndex = 0;
-            Synth.SelectVoice(voiceSelectionMenu.Text);
+            ChangeVoice();
         }
 
         private void clearButton_Click(object sender, EventArgs e)
@@ -39,7 +48,7 @@ namespace WindowsTextReader
 
         private void voiceSelectionMenu_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Synth.SelectVoice(voiceSelectionMenu.Text);
+            ChangeVoice();
         }
     }
 }

@@ -41,6 +41,10 @@
             settingsToolStripMenuItem1 = new ToolStripMenuItem();
             exitToolStripMenuItem1 = new ToolStripMenuItem();
             flowLayoutPanel1 = new FlowLayoutPanel();
+            label2 = new Label();
+            label3 = new Label();
+            genderLabel = new Label();
+            langLabel = new Label();
             menuStrip.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
@@ -52,7 +56,7 @@
             readOutLoudTextBox.Name = "readOutLoudTextBox";
             readOutLoudTextBox.ScrollBars = RichTextBoxScrollBars.ForcedVertical;
             readOutLoudTextBox.Size = new Size(914, 437);
-            readOutLoudTextBox.TabIndex = 3;
+            readOutLoudTextBox.TabIndex = 7;
             readOutLoudTextBox.Text = "Text to read";
             // 
             // clearButton
@@ -60,7 +64,7 @@
             clearButton.Location = new Point(631, 6);
             clearButton.Name = "clearButton";
             clearButton.Size = new Size(112, 34);
-            clearButton.TabIndex = 4;
+            clearButton.TabIndex = 9;
             clearButton.Text = "Clear Text";
             clearButton.UseVisualStyleBackColor = true;
             clearButton.Click += clearButton_Click;
@@ -70,7 +74,7 @@
             readButton.Location = new Point(749, 6);
             readButton.Name = "readButton";
             readButton.Size = new Size(180, 34);
-            readButton.TabIndex = 5;
+            readButton.TabIndex = 10;
             readButton.Text = "Read the text";
             readButton.UseVisualStyleBackColor = true;
             readButton.Click += readButton_Click;
@@ -81,7 +85,7 @@
             label1.Location = new Point(12, 83);
             label1.Name = "label1";
             label1.Size = new Size(309, 25);
-            label1.TabIndex = 2;
+            label1.TabIndex = 6;
             label1.Text = "Paste the text to read out loud below:";
             // 
             // voiceSelectionMenu
@@ -109,7 +113,8 @@
             menuStrip.Location = new Point(0, 0);
             menuStrip.Name = "menuStrip";
             menuStrip.Size = new Size(938, 33);
-            menuStrip.TabIndex = 3;
+            menuStrip.TabIndex = 100;
+            menuStrip.TabStop = true;
             menuStrip.Text = "menuStrip1";
             // 
             // fileToolStripMenuItem1
@@ -122,19 +127,19 @@
             // importTexttxtToolStripMenuItem1
             // 
             importTexttxtToolStripMenuItem1.Name = "importTexttxtToolStripMenuItem1";
-            importTexttxtToolStripMenuItem1.Size = new Size(250, 34);
+            importTexttxtToolStripMenuItem1.Size = new Size(270, 34);
             importTexttxtToolStripMenuItem1.Text = "Import text (*.txt)";
             // 
             // settingsToolStripMenuItem1
             // 
             settingsToolStripMenuItem1.Name = "settingsToolStripMenuItem1";
-            settingsToolStripMenuItem1.Size = new Size(250, 34);
+            settingsToolStripMenuItem1.Size = new Size(270, 34);
             settingsToolStripMenuItem1.Text = "Settings";
             // 
             // exitToolStripMenuItem1
             // 
             exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
-            exitToolStripMenuItem1.Size = new Size(250, 34);
+            exitToolStripMenuItem1.Size = new Size(270, 34);
             exitToolStripMenuItem1.Text = "Exit";
             // 
             // flowLayoutPanel1
@@ -147,13 +152,51 @@
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Padding = new Padding(3);
             flowLayoutPanel1.Size = new Size(938, 47);
-            flowLayoutPanel1.TabIndex = 6;
+            flowLayoutPanel1.TabIndex = 8;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(491, 42);
+            label2.Name = "label2";
+            label2.Size = new Size(78, 25);
+            label2.TabIndex = 2;
+            label2.Text = "Gender: ";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(683, 42);
+            label3.Name = "label3";
+            label3.Size = new Size(98, 25);
+            label3.TabIndex = 4;
+            label3.Text = "Language: ";
+            // 
+            // genderLabel
+            // 
+            genderLabel.AutoSize = true;
+            genderLabel.Location = new Point(575, 42);
+            genderLabel.Name = "genderLabel";
+            genderLabel.Size = new Size(0, 25);
+            genderLabel.TabIndex = 3;
+            // 
+            // langLabel
+            // 
+            langLabel.AutoSize = true;
+            langLabel.Location = new Point(787, 42);
+            langLabel.Name = "langLabel";
+            langLabel.Size = new Size(0, 25);
+            langLabel.TabIndex = 5;
             // 
             // TextReader
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(938, 610);
+            Controls.Add(langLabel);
+            Controls.Add(genderLabel);
+            Controls.Add(label3);
+            Controls.Add(label2);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(readOutLoudTextBox);
             Controls.Add(menuStrip);
@@ -187,5 +230,9 @@
         private ToolStripMenuItem settingsToolStripMenuItem1;
         private ToolStripMenuItem exitToolStripMenuItem1;
         private FlowLayoutPanel flowLayoutPanel1;
+        private Label label2;
+        private Label label3;
+        private Label genderLabel;
+        private Label langLabel;
     }
 }
