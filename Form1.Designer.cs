@@ -47,16 +47,17 @@
             // 
             // readOutLoudTextBox
             // 
-            readOutLoudTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            readOutLoudTextBox.Location = new Point(12, 111);
+            readOutLoudTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            readOutLoudTextBox.Location = new Point(12, 120);
             readOutLoudTextBox.Name = "readOutLoudTextBox";
-            readOutLoudTextBox.Size = new Size(914, 430);
+            readOutLoudTextBox.ScrollBars = RichTextBoxScrollBars.ForcedVertical;
+            readOutLoudTextBox.Size = new Size(914, 437);
             readOutLoudTextBox.TabIndex = 3;
             readOutLoudTextBox.Text = "Text to read";
             // 
             // clearButton
             // 
-            clearButton.Location = new Point(3, 3);
+            clearButton.Location = new Point(631, 6);
             clearButton.Name = "clearButton";
             clearButton.Size = new Size(112, 34);
             clearButton.TabIndex = 4;
@@ -66,7 +67,7 @@
             // 
             // readButton
             // 
-            readButton.Location = new Point(121, 3);
+            readButton.Location = new Point(749, 6);
             readButton.Name = "readButton";
             readButton.Size = new Size(180, 34);
             readButton.TabIndex = 5;
@@ -86,7 +87,7 @@
             // voiceSelectionMenu
             // 
             voiceSelectionMenu.FormattingEnabled = true;
-            voiceSelectionMenu.Location = new Point(151, 33);
+            voiceSelectionMenu.Location = new Point(151, 39);
             voiceSelectionMenu.Name = "voiceSelectionMenu";
             voiceSelectionMenu.Size = new Size(283, 33);
             voiceSelectionMenu.TabIndex = 1;
@@ -95,7 +96,7 @@
             // label0
             // 
             label0.AutoSize = true;
-            label0.Location = new Point(12, 36);
+            label0.Location = new Point(12, 42);
             label0.Name = "label0";
             label0.Size = new Size(118, 25);
             label0.TabIndex = 0;
@@ -115,8 +116,8 @@
             // 
             fileToolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { importTexttxtToolStripMenuItem1, settingsToolStripMenuItem1, exitToolStripMenuItem1 });
             fileToolStripMenuItem1.Name = "fileToolStripMenuItem1";
-            fileToolStripMenuItem1.Size = new Size(54, 29);
-            fileToolStripMenuItem1.Text = "File";
+            fileToolStripMenuItem1.Size = new Size(73, 29);
+            fileToolStripMenuItem1.Text = "Menu";
             // 
             // importTexttxtToolStripMenuItem1
             // 
@@ -139,11 +140,13 @@
             // flowLayoutPanel1
             // 
             flowLayoutPanel1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            flowLayoutPanel1.Controls.Add(clearButton);
             flowLayoutPanel1.Controls.Add(readButton);
-            flowLayoutPanel1.Location = new Point(0, 547);
+            flowLayoutPanel1.Controls.Add(clearButton);
+            flowLayoutPanel1.FlowDirection = FlowDirection.RightToLeft;
+            flowLayoutPanel1.Location = new Point(0, 563);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(938, 182);
+            flowLayoutPanel1.Padding = new Padding(3);
+            flowLayoutPanel1.Size = new Size(938, 47);
             flowLayoutPanel1.TabIndex = 6;
             // 
             // TextReader
@@ -159,6 +162,7 @@
             Controls.Add(label1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip;
+            MinimumSize = new Size(800, 500);
             Name = "TextReader";
             Text = "Text Reader";
             Load += Form1_Load;
