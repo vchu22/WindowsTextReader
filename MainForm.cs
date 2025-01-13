@@ -50,5 +50,17 @@ namespace WindowsTextReader
         {
             ChangeVoice();
         }
+
+        private void stopButton_Click(object sender, EventArgs e)
+        {
+            Synth.Pause();
+            Synth.SpeakAsyncCancelAll();
+            Synth.Resume();
+        }
+
+        private void speedTrackBar_Scroll(object sender, EventArgs e)
+        {
+            Synth.Rate = speedTrackBar.Value * 2;
+        }
     }
 }
