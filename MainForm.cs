@@ -86,5 +86,20 @@ namespace WindowsTextReader
             // Speak the text in the textbox
             Synth?.SpeakAsync(readOutLoudTextBox.Text);
         }
+
+        private void importTextToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofDialog = new OpenFileDialog();
+            ofDialog.Title = "Select File";
+            ofDialog.InitialDirectory = Application.StartupPath;
+            ofDialog.Filter = "Text File (*.txt)|*.txt";
+            ofDialog.FilterIndex = 1;
+            ofDialog.ShowDialog();
+
+            if (ofDialog.ShowDialog() == DialogResult.OK)
+            {
+                // Fill textarea with txt file content
+            }
+        }
     }
 }

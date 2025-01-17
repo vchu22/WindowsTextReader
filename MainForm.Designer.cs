@@ -37,7 +37,7 @@
             label0 = new Label();
             menuStrip = new MenuStrip();
             fileToolStripMenuItem1 = new ToolStripMenuItem();
-            importTexttxtToolStripMenuItem1 = new ToolStripMenuItem();
+            importTextToolStripMenuItem = new ToolStripMenuItem();
             settingsToolStripMenuItem1 = new ToolStripMenuItem();
             exitToolStripMenuItem1 = new ToolStripMenuItem();
             flowLayoutPanel1 = new FlowLayoutPanel();
@@ -129,27 +129,28 @@
             // 
             // fileToolStripMenuItem1
             // 
-            fileToolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { importTexttxtToolStripMenuItem1, settingsToolStripMenuItem1, exitToolStripMenuItem1 });
+            fileToolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { importTextToolStripMenuItem, settingsToolStripMenuItem1, exitToolStripMenuItem1 });
             fileToolStripMenuItem1.Name = "fileToolStripMenuItem1";
             fileToolStripMenuItem1.Size = new Size(73, 29);
             fileToolStripMenuItem1.Text = "Menu";
             // 
-            // importTexttxtToolStripMenuItem1
+            // importTextToolStripMenuItem
             // 
-            importTexttxtToolStripMenuItem1.Name = "importTexttxtToolStripMenuItem1";
-            importTexttxtToolStripMenuItem1.Size = new Size(250, 34);
-            importTexttxtToolStripMenuItem1.Text = "Import text (*.txt)";
+            importTextToolStripMenuItem.Name = "importTextToolStripMenuItem";
+            importTextToolStripMenuItem.Size = new Size(270, 34);
+            importTextToolStripMenuItem.Text = "Import text (*.txt)";
+            importTextToolStripMenuItem.Click += importTextToolStripMenuItem_Click;
             // 
             // settingsToolStripMenuItem1
             // 
             settingsToolStripMenuItem1.Name = "settingsToolStripMenuItem1";
-            settingsToolStripMenuItem1.Size = new Size(250, 34);
+            settingsToolStripMenuItem1.Size = new Size(270, 34);
             settingsToolStripMenuItem1.Text = "Settings";
             // 
             // exitToolStripMenuItem1
             // 
             exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
-            exitToolStripMenuItem1.Size = new Size(250, 34);
+            exitToolStripMenuItem1.Size = new Size(270, 34);
             exitToolStripMenuItem1.Text = "Exit";
             // 
             // flowLayoutPanel1
@@ -325,7 +326,7 @@
         private Label label0;
         private MenuStrip menuStrip;
         private ToolStripMenuItem fileToolStripMenuItem1;
-        private ToolStripMenuItem importTexttxtToolStripMenuItem1;
+        private ToolStripMenuItem importTextToolStripMenuItem;
         private ToolStripMenuItem settingsToolStripMenuItem1;
         private ToolStripMenuItem exitToolStripMenuItem1;
         private FlowLayoutPanel flowLayoutPanel1;
