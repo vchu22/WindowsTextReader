@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using System.Speech.Synthesis;
 using System.Text.RegularExpressions;
 
@@ -61,7 +62,7 @@ namespace WindowsTextReader
 
         private void voiceSelectionMenu_SelectedIndexChanged(object sender, EventArgs e)
         {
-            CheckSynth();
+            CheckSynth(ChangeVoice);
         }
 
         private void speedTrackBar_Scroll(object sender, EventArgs e)
