@@ -1,6 +1,4 @@
-using System.Diagnostics;
 using System.Speech.Synthesis;
-using System.Text.RegularExpressions;
 
 namespace WindowsTextReader
 {
@@ -22,6 +20,7 @@ namespace WindowsTextReader
                 Synth = new SpeechSynthesizer();
                 Synth.SetOutputToDefaultAudioDevice();
                 ChangeVoice();
+                ChangeSpeed();
                 if (noSynthCallback != null) noSynthCallback();
             }
             else
@@ -39,7 +38,10 @@ namespace WindowsTextReader
             genderLabel.Text = voiceInfoList.ElementAt(voiceSelectionMenu.SelectedIndex).Gender.ToString();
             langLabel.Text = voiceInfoList.ElementAt(voiceSelectionMenu.SelectedIndex).Culture.ToString();
         }
-
+        private void ChangeSpeed()
+        {
+            Synth.Rate = speedTrackBar.Value * 2;
+        }
         // **** UI METHODS *****
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -67,7 +69,7 @@ namespace WindowsTextReader
 
         private void speedTrackBar_Scroll(object sender, EventArgs e)
         {
-            CheckSynth(() => { Synth.Rate = speedTrackBar.Value * 2; });
+            CheckSynth(ChangeSpeed);
         }
         private void stopButton_Click(object sender, EventArgs e)
         {
