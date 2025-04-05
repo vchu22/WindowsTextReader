@@ -22,5 +22,29 @@ namespace WindowsTextReader.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int Voice {
+            get {
+                return ((int)(this["Voice"]));
+            }
+            set {
+                this["Voice"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int SpeechRate {
+            get {
+                return ((int)(this["SpeechRate"]));
+            }
+            set {
+                this["SpeechRate"] = value;
+            }
+        }
     }
 }

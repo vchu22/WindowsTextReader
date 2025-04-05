@@ -1,4 +1,6 @@
 using System.Speech.Synthesis;
+using System.Configuration;
+using System.IO.IsolatedStorage;
 
 namespace WindowsTextReader
 {
@@ -35,6 +37,10 @@ namespace WindowsTextReader
                 Synth = new SpeechSynthesizer();
             }
             Synth.SelectVoice(voiceSelectionMenu.Text);
+            // save the new selection to saved settings
+            Properties.Settings.Default["Voice"] = voiceSelectionMenu.SelectedIndex;
+            Properties.Settings.Default.Save();
+
             genderLabel.Text = voiceInfoList.ElementAt(voiceSelectionMenu.SelectedIndex).Gender.ToString();
             langLabel.Text = voiceInfoList.ElementAt(voiceSelectionMenu.SelectedIndex).Culture.ToString();
         }
@@ -53,7 +59,8 @@ namespace WindowsTextReader
                 voiceSelectionMenu.Items.Add($"{info.Name}");
                 voiceInfoList.Add(info);
             }
-            voiceSelectionMenu.SelectedIndex = 0;
+            // load selection from saved settings
+            voiceSelectionMenu.SelectedIndex = (int)Properties.Settings.Default["Voice"];
             ChangeVoice();
         }
 
